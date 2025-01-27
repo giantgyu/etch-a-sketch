@@ -5,8 +5,8 @@ div {
 #grid-container {
     display: flex;
     flex-direction: column;
-    width: 90vw;
-    height: 90vw;
+    width: 70vh;
+    height: 70vh;
     margin: 0 auto;
     background-color: aliceblue;
     align-items: stretch;
@@ -23,6 +23,7 @@ div {
     flex: 1;
     margin: 0;
     padding: 0;
-    background-color: beige;
-    border: 0.5px solid brown;
+    background-color: black;
+    opacity: 0;
+    border: 0.5px solid rgb(93, 93, 93);
 }

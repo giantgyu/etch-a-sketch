@@ -12,11 +12,23 @@ const gridGenerator = document.querySelector("#grid-generator");
 gridGenerator.addEventListener("click", () => {
     gridContainer.innerHTML = "";
     gridRow.innerHTML = "";
-    const inputNumber = prompt("Enter an integer");
-    generateSquare(inputNumber);
-    console.log(inputNumber);
-}
+    let inputNumber;
 
+    do {
+        inputNumber = prompt("Enter an integer greater than 1 and less than or equal to 100:");
+
+        // Convert the input to an integer
+        inputNumber = parseInt(inputNumber);
+
+        // Check if the input is a valid number and within the specified range
+        if (isNaN(inputNumber) || inputNumber <= 1 || inputNumber > 100) {
+            alert("Invalid input! Please enter an integer between 2 and 100.");
+        }
+    } while (isNaN(inputNumber) || inputNumber <= 1 || inputNumber > 100);
+
+
+    generateSquare(inputNumber);
+}
 )
 
 
@@ -30,6 +42,15 @@ function generateSquare(numberOfSquares) {
     for (let i = 0; i < numberOfSquares; i++) {
         gridContainer.appendChild(gridRow.cloneNode(true));
     }
+    const gridUnits = document.querySelectorAll(".grid-unit");
+
+    gridUnits.forEach(gridUnit => {
+        gridUnit.addEventListener("mouseover", () => {
+            // Add color to the hovered unit
+            gridUnit.style.opacity += 0.2;
+        });
+    });
 }
 
 
+generateSquare(16); git
