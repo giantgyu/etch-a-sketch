@@ -1,0 +1,28 @@
+div {
+    box-sizing: border-box;
+}
+
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 90vw;
+    margin: 0 auto;
+    background-color: aliceblue;
+    align-items: stretch;
+}
+
+.grid-row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.grid-unit {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    border: 0.5px solid brown;
+}
