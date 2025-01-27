@@ -53,4 +53,4 @@ function generateSquare(numberOfSquares) {
 }
 
 
-generateSquare(16); git
+generateSquare(16);
