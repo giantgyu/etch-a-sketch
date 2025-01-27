@@ -9,11 +9,11 @@ gridUnit.classList.add("grid-unit");
 const rgbToggler = document.querySelector("#rgb-toggler");
 rgbToggler.addEventListener("click", toggleRGB);
 
-// Function to generate a random RGB color
+// Function to generate a random pastel RGB color
 function getRandomColor() {
-    const r = Math.floor(Math.random() * 256); // Random value for red (0-255)
-    const g = Math.floor(Math.random() * 256); // Random value for green (0-255)
-    const b = Math.floor(Math.random() * 256); // Random value for blue (0-255)
+    const r = Math.floor(Math.random() * 128) + 128; // Ensure the red value is between 128 and 255
+    const g = Math.floor(Math.random() * 128) + 128; // Ensure the green value is between 128 and 255
+    const b = Math.floor(Math.random() * 128) + 128; // Ensure the blue value is between 128 and 255
 
     return `rgb(${r}, ${g}, ${b})`; // Return the RGB color in the format rgb(r, g, b)
 }
